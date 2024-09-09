@@ -1,0 +1,22 @@
+.underline-hover {
+    position: relative;
+    text-decoration: none;
+    /* Remove the default underline */
+}
+
+.underline-hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    /* Adjust as needed */
+    width: 0;
+    height: 1px;
+    background-color: white;
+    /* Adjust the color as needed */
+    transition: width 0.3s;
+}
+
+.underline-hover:hover::before {
+    width: 100%;
+}
